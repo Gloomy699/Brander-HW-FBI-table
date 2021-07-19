@@ -1,0 +1,59 @@
+.header {
+  text-align: center;
+}
+
+.form_position {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.table {
+  font-family: Prata;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.table_border {
+  border-collapse: collapse;
+}
+
+.tbody tr:focus,
+.tbody tr:hover {
+  background-color: white;
+  color: black;
+}
+
+.table td {
+  border: 1px solid red;
+  padding: 8px;
+}
+
+.table th {
+  border: 1px solid red;
+  padding: 8px;
+}
+
+img {
+  width: 100px;
+  height: 120px;
+}
+
+.footer_statData {
+  text-align: center;
+  font-size: medium;
+  list-style: none;
+  padding-bottom: 20px;
+}
+
+.footer_statData li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+body {
+  background-color: black;
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */

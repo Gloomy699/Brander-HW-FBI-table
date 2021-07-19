@@ -1,0 +1,9 @@
+.footer_statData {
+  text-align: center;
+  font-size: medium;
+  list-style: none;
+  padding-bottom: 20px;
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
