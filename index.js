@@ -48,8 +48,10 @@ const dataTable = (newData) => {newData.map ((item) => {
         <td>${item.race ? item.race : "нет информации"}</td>
         <td>${item.status ? item.status : "нет информации"}</td>
         <td>${item.description ? item.description : "нет информации"}</td>
-        <td>${item.warning_message ? item.warning_message : "нет информации"}</td>
-        <td><img src=${item.images[0].original ? item.images[0].original : "нет фото"}>
+           <td>${item.reward_text ? item.reward_text : "нет информации"}</td>
+           <td>${item.warning_message ? item.warning_message : "нет информации"}</td>
+
+           <td><img src=${item.images[0].original ? item.images[0].original : "нет фото"}>
         </td>`
     tbody.appendChild(tr)
 })}
