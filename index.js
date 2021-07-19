@@ -3,6 +3,11 @@ const input = document.getElementById("searchByName");
 const go = document.getElementById('go')
 go.addEventListener("click", dataFilter)
 
+// ---------заглушка для сортировки по имени.-----------
+// const sort = document.getElementById('sort')
+// sort.addEventListener("click", sortedRows)
+// -----------------------------------------------------
+
 fetch("fbi.json").then((response) => {
     return response.json()
 }).then((data) => {
@@ -21,7 +26,7 @@ function dataFilter() {
         tr = []
     
     for(i = 0; i < table.length; i+=1) {
-        for (let a = 0; a < table[i].rows.length; a++) {
+        for (let a = 0; a < table[i].rows.length; a+=1) {
             tr.push(table[i].rows[a])
         }
     }
@@ -38,18 +43,19 @@ function dataFilter() {
     }
 }
 
+
 const dataTable = (newData) => {newData.map ((item) => {
     const tbody = document.getElementById("tbody")
     const tr = document.createElement("tr")
     tr.innerHTML = ` 
-        <td>${item.title ? item.title : "нет информации"}</td>
+        <td id="name">${item.title ? item.title : "нет информации"}</td>
         <td>${item.sex ? item.sex : "нет информации"}</td>
         <td>${item.nationality ? item.nationality : "нет информации"}</td>
         <td>${item.race ? item.race : "нет информации"}</td>
         <td>${item.status ? item.status : "нет информации"}</td>
         <td>${item.description ? item.description : "нет информации"}</td>
-           <td>${item.reward_text ? item.reward_text : "нет информации"}</td>
            <td>${item.warning_message ? item.warning_message : "нет информации"}</td>
+           <td>${item.reward_text ? item.reward_text : "нет информации"}</td>
 
            <td><img src=${item.images[0].original ? item.images[0].original : "нет фото"}>
         </td>`
