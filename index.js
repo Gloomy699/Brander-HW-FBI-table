@@ -1,5 +1,7 @@
 const newData = [];
 const input = document.getElementById("searchByName");
+const go = document.getElementById('go')
+go.addEventListener("click", dataFilter)
 
 fetch("fbi.json").then((response) => {
     return response.json()
@@ -9,9 +11,7 @@ fetch("fbi.json").then((response) => {
         dataStat(newData)
     })
 
-if (input) {
-    input.addEventListener('keyup', dataFilter)
-}
+
 
 
 function dataFilter() {
